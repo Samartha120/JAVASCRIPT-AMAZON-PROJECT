@@ -25,6 +25,179 @@ const products =[{
        count:56
     },
     priceCents:799
+},{
+    image:'images/products/black-2-slot-toaster.jpg',
+    name:'2 Slot Toaster-Black',
+    rating:{
+        stars:5.0 ,
+        count:2197
+    },
+    priceCents:1899
+},{
+    image:'images/products/6-piece-white-dinner-plate-set.jpg',
+    name: '6-Piece White Dinner Plate Set',
+    rating:{
+        stars:4.0,
+        count:37,
+    },
+    priceCents:2067
+},{
+    image:'images/products/6-piece-non-stick-baking-set.webp',
+    name:' 6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set',
+    rating:{
+        stars: 4.5,
+        count: 175,
+    },
+    priceCents:3499
+},{
+    image:'images/products/plain-hooded-fleece-sweatshirt-yellow.jpg',
+    name:' Plain Hooded Fleece Sweatshirt',
+    rating:{
+        stars:4.5 ,
+        count: 317,
+    },
+    priceCents:2400
+
+},{
+    image:'images/products/luxury-tower-set-6-piece.jpg',
+    name:'   Luxury Towel Set - Graphite Gray  ',
+    rating:{
+        stars:4.5 ,
+        count: 144,
+    },
+    priceCents:3599
+},{
+    image:'images/products/liquid-laundry-detergent-plain.jpg',
+    name:' Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz ',
+    rating:{
+        stars:4.5,
+        count: 30 ,
+   
+          
+    },
+    priceCents:2899
+},{
+    image:'images/products/knit-athletic-sneakers-gray.jpg',
+    name:'  Waterproof Knit Athletic Sneakers - Gray ',
+    rating:{
+        stars:4,
+        count:89 ,
+
+    },
+    priceCents: 3390
+},{
+    image:'images/products/women-chiffon-beachwear-coverup-black.jpg',
+    name:' Women\'s Chiffon Beachwear Cover Up-Black',
+    rating:{
+        stars:4.5  , 
+        count: 235 ,
+    },
+    priceCents: 2070
+},{
+    image:'images/products/round-sunglasses-black.jpg',
+    name:' Round Sunglasses ',
+     rating:{
+        stars: 4.5 ,
+        count:  30 ,
+
+     },
+     priceCents:1560
+},{
+       image:'images/products/women-beach-sandals.jpg',
+    name:'  Women\'s Two Strap Buckle Sandals - Tan ',
+     rating:{
+        stars:4.5,
+        count:562,
+
+     },
+     priceCents:2499
+},{
+    image:'images/products/blackout-curtain-set-beige.webp',
+    name:' Blackout Curtains Set 4-Pack - Beige',
+    rating:{
+        stars:4.5 ,
+         count:232 ,
+    },
+    priceCents:4599
+},{
+    image:'images/products/men-slim-fit-summer-shorts-gray.jpg',
+    name:' Men\'s Slim-Fit Summer Shorts ',
+     rating:{
+        stars:4.0 ,
+        count:160 ,
+
+     },
+     priceCents:1699
+},{
+    image:'images/products/electric-glass-and-steel-hot-water-kettle.webp',
+    name:'Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter',
+    rating:{
+        stars:  5.0,
+        count:846,
+             },
+    priceCents: 3074
+},{  
+       image:'images/products/facial-tissue-2-ply-18-boxes.jpg',
+    name:' Ultra Soft Tissue 2-Ply - 18 Box',
+    rating:{
+        stars: 4,
+        count:99,
+         
+    },
+    priceCents: 2374
+},{
+      image:'images/products/straw-sunhat.webp',
+    name:'Straw Lifeguard Sun Hat',
+    rating:{
+        stars:4,
+        count:215,
+         
+    },
+    priceCents:2200 
+},{
+    image:'images/products/sky-flower-stud-earrings.webp',
+    name:' Sterling Silver Sky Flower Stud Earrings',
+    rating:{
+        stars: 4.5 ,
+        count: 52 ,
+
+    },
+    priceCents:1799
+},{
+    image:'images/products/women-stretch-popover-hoodie-black.jpg',
+    name:' Women\'s Stretch Popover Hoodie ',
+    rating: {
+        stars: 4.5 ,
+        count: 2465 ,
+
+    },
+    priceCents:1374
+},{
+    image:'images/products/bathroom-rug.jpg',
+    name:' Bathroom Bath Rug Mat 20 x 31 Inch - Grey',
+    rating: {
+        stars:4.5 ,
+         count:119 ,
+    },
+    priceCents:1250
+},{
+    image:'images/products/women-knit-ballet-flat-black.jpg',
+    name: '  Women\'s Knit Ballet Flat ',
+    rating:{
+        stars:4.0 ,
+         count: 326 ,
+
+    },
+    priceCents:2640
+    
+},{
+    image:'images/products/men-golf-polo-t-shirt-blue.jpg',
+    name: ' Men\'s Regular-Fit Quick-Dry Golf Polo Shirt',
+    rating:{
+        stars: 4.5,
+         count:2556 ,
+    },
+    priceCents:1599
 }];
 let productsHTML='';
 
