@@ -198,6 +198,157 @@ const products =[{
          count:2556 ,
     },
     priceCents:1599
+},{
+    image:' images/products/trash-can-with-foot-pedal-50-liter.jpg',
+    name: ' Trash Can with Foot Pedal - Brushed Stainless Steel',
+    rating:{
+        stars: 4.5,
+        count:2286 ,
+
+    },
+    priceCents:83.00
+},{
+    image:'images/products/duvet-cover-set-blue-twin.jpg',
+    name:' Duvet Cover Set with Zipper Closure',
+    rating:{
+        stars:  4 ,
+        count:456,
+    },
+    priceCents:2399
+},{
+    image:'images/products/women-chunky-beanie-gray.webp',
+    name:'Women\'s Chunky Cable Beanie - Gray',
+    rating:{
+        stars: 5.0 ,
+        count:83,
+
+    },
+    priceCents:1250
+},{
+    image:' images/products/men-chino-pants-beige.jpg',
+    name:'  Men\'s Classic-fit Pleated Chino Pants ',
+    rating:{
+        stars:4.5 ,
+        count: 9017,
+
+    },
+    priceCents:2290
+},{
+    image:'images/products/men-athletic-shoes-green.jpg',
+    name:'  Men\'s Athletic Sneaker',
+    rating:{
+        stars:4 ,
+        count: 229,
+    },
+    priceCents:3890
+},{
+    image:'images/products/men-navigator-sunglasses-brown.jpg',
+    name:'Men\'s Navigator Sunglasses Pilot',
+    rating:{
+        stars:3.5 ,
+        count: 42,
+
+    },
+    priceCents: 1690
+},{
+    image:'images/products/non-stick-cooking-set-15-pieces.webp',
+    name:' Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces',
+    rating:{
+        stars: 4.5 ,
+        count:511 ,
+
+    },
+    priceCents:6797
+},{
+    image:'images/products/vanity-mirror-silver.jpg',
+    name:' Vanity Mirror with Heavy Base - Chrome',
+    rating:{
+        stars: 4.5 ,
+        count:130 , 
+
+    },
+    priceCents:1649
+},{
+    image:'images/products/women-french-terry-fleece-jogger-camo.jpg',
+    name: 'Women\'s Fleece Jogger Sweatpant',
+    rating: {
+        stars: 4.5 ,
+        count: 248,
+
+    },
+    priceCents:24.00
+},{
+    image:'images/products/double-elongated-twist-french-wire-earrings.webp',
+    name: ' Double Oval Twist French Wire Earrings - Gold',
+    rating: {
+        stars: 4.5,
+        count:117 ,
+    },
+     priceCents:24.00
+},{
+    image:'images/products/round-airtight-food-storage-containers.jpg',
+    name:' Round Airtight Food Storage Containers - 5 Piece',
+    rating:{
+        stars:4 ,
+        count: 126 ,
+
+    },
+    priceCents:2899
+},{
+    image: 'images/products/coffeemaker-with-glass-carafe-black.jpg',
+    name:'Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black ',
+    rating: {
+        stars: 4.5 ,
+        count: 1211,
+
+    },
+    priceCents:2250
+},{
+    image:'images/products/blackout-curtains-black.jpg',
+    name:'Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels',
+    rating:{
+        stars: 4.5 ,
+        count: 363 ,
+
+    },
+    priceCents:3099
+},{
+    image:'images/products/cotton-bath-towels-teal.webp',
+    name:'100% Cotton Bath Towels - 2 Pack, Light Teal ',
+    rating:{
+        stars: 4.5 ,
+        count: 93 ,
+
+    },
+    priceCents:2110
+},{
+    image:'images/products/knit-athletic-sneakers-pink.webp',
+    name:'Waterproof Knit Athletic Sneakers - Pink',
+    rating:{
+        stars:4.0  ,
+        count:89,
+
+    },
+    priceCents:3390
+},{
+    image:'images/products/countertop-blender-64-oz.jpg',
+    name:'Countertop Blender - 64oz, 1400 Watts',
+    rating:{
+        stars:4 ,
+        count: 3,
+
+    },
+    priceCents:10747
+},{
+    image:'images/products/floral-mixing-bowl-set.jpg',
+    name:'10-Piece Mixing Bowl Set with Lids - Floral',
+    rating:
+    {
+        stars:5  ,
+        count: 679,
+
+    },
+    priceCents:3899
 }];
 let productsHTML='';
 
