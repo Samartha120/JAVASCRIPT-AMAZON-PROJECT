@@ -1,3 +1,5 @@
+ import {cart} from '../data/cart.js';
+
 const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -739,6 +741,13 @@ let productsHTML='';
                 quantity:1,
              });
           }
+             
+           let cartQuantity=0;
+           cart.forEach((item)=>{
+               cartQuantity+=item.quantity;
+           });
+              document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
+           console.log(cartQuantity);
             console.log(cart);
         });
      });
