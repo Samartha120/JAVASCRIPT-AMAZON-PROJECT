@@ -99,7 +99,7 @@ import {formatCurrency} from './utils/money.js';
 //    console.log(cartSummaryHTML);
     
 
-   // Attach click handlers for delete links (use lowercase selector)
+ 
    document.querySelectorAll('.js-delete-link')
    .forEach((link)=>{
     link.addEventListener('click',()=>{
