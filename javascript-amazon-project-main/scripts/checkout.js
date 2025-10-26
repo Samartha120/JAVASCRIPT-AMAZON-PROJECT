@@ -1,6 +1,6 @@
-import {cart} from '../data/cart.js';
+import {cart,removeFromCart} from '../data/cart.js';
 import {products}  from '../data/products.js';
-import {formatCurrrency} from './utils/money.js';
+import {formatCurrency} from './utils/money.js';
 
  let cartSummaryHTML = '' ;
    cart.forEach((cartItem)=>{
@@ -28,7 +28,7 @@ import {formatCurrrency} from './utils/money.js';
                     ${matchingProduct.name}
                     </div>
                     <div class="product-price">
-                    ${(matchingProduct.priceCents /100).toFixed(2)}
+                    $${formatCurrency(matchingProduct.priceCents)}
                     </div>
                     <div class="product-quantity">
                     <span>
@@ -37,7 +37,8 @@ import {formatCurrrency} from './utils/money.js';
                     <span class="update-quantity-link link-primary">
                         Update
                     </span>
-                    <span class="delete-quantity-link link-primary">
+                    <span class="delete-quantity-link link-primary js-delete-link" 
+                    data-product-id ="${matchingProduct.id}">
                         Delete
                     </span>
                     </div>
@@ -94,5 +95,15 @@ import {formatCurrrency} from './utils/money.js';
 
    });
     document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
-   console.log(cartSummaryHTML);
+//    console.log(cartSummaryHTML);
     
+
+   // Attach click handlers for delete links (use lowercase selector)
+   document.querySelectorAll('.js-delete-link')
+   .forEach((link)=>{
+    link.addEventListener('click',()=>{
+       const productId=link.dataset.productId;
+      removeFromCart(productId);
+      console.log(cart);
+    })
+   })
