@@ -14,7 +14,8 @@ import {formatCurrency} from './utils/money.js';
             });
          
       cartSummaryHTML +=  `    
-            <div class="cart-item-container">
+            <div class="cart-item-container
+            js-cart-item-container-${matchingProduct.id}">
                 <div class="delivery-date">
                 Delivery date: Tuesday, June 21
                 </div>
@@ -104,6 +105,11 @@ import {formatCurrency} from './utils/money.js';
     link.addEventListener('click',()=>{
        const productId=link.dataset.productId;
       removeFromCart(productId);
-      console.log(cart);
+       
+       const containerToRemove = document.querySelector(`.js-cart-item-container-${productId}`);
+
+    //    console.log(containerToRemove);
+
+       containerToRemove.remove();
     })
    })
