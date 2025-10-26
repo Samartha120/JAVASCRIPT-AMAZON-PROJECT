@@ -1,6 +1,7 @@
 import {cart} from '../data/cart.js';
 import {products}  from '../data/products.js';
 
+ let cartSummaryHTML = '' ;
    cart.forEach((cartItem)=>{
           
           const productId=cartItem.productId;
@@ -11,7 +12,7 @@ import {products}  from '../data/products.js';
                 }
             });
          
-    `    
+      cartSummaryHTML +=  `    
             <div class="cart-item-container">
                 <div class="delivery-date">
                 Delivery date: Tuesday, June 21
@@ -88,7 +89,9 @@ import {products}  from '../data/products.js';
                 </div>
             </div>
 
-   `
+   `;
 
    });
+    document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
+   console.log(cartSummaryHTML);
     
