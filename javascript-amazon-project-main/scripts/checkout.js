@@ -28,19 +28,18 @@ console.log(DeliveryDate.format('dddd ,  MMMM D'));
          
         const deliveryOptionId = cartItem.deliveryOptionId;      
         let deliveryOption;
-        
         deliveryOptions.forEach((option)=>{
-                if(option.id  === deliveryOptionId){
-                deliveryOption=option;
-                }
+            if(option.id === deliveryOptionId){
+                deliveryOption = option;
+            }
         });
-           const today = dayjs();
-    const deliveryDate = today.add(
-        deliveryOption.deliveryDays ,'days'
-    );    
-    const dateString = deliveryDate.format(
-        'dddd ,MMMM D'
-    );
+        if(!deliveryOption){
+            // fallback to default option if cart item has unknown deliveryOptionId
+            deliveryOption = deliveryOptions[0];
+        }
+
+        const deliveryDate = dayjs().add(deliveryOption.deliveryDays ,'days');
+        const dateString = deliveryDate.format('dddd ,MMMM D');
         
 
       cartSummaryHTML +=  `    
@@ -90,47 +89,34 @@ console.log(DeliveryDate.format('dddd ,  MMMM D'));
 
    });
 
-   function DeliveryOptionsHTML(matchingProduct,cartItem){
-    let html='';
-    const productDeliveryOptions = matchingProduct.deliveryOptions || deliveryOptions;
-    productDeliveryOptions.forEach((deliveryOption)=>{
+     function DeliveryOptionsHTML(matchingProduct,cartItem){
+        let html='';
+        const productDeliveryOptions = matchingProduct.deliveryOptions || deliveryOptions;
+        productDeliveryOptions.forEach((deliveryOption)=>{
+                const deliveryDate = dayjs().add(deliveryOption.deliveryDays,'days');
+                const dateString = deliveryDate.format('dddd ,MMMM D');
+                const priceString = deliveryOption.priceCents === 0
+                        ? 'FREE Shipping'
+                        : `$${formatCurrency(deliveryOption.priceCents)} - Shipping`;
 
-    const today = dayjs();
-    const deliveryDate = today.add(
-        deliveryOption.deliveryDays ,'days'
-    );    
-    const dateString = deliveryDate.format(
-        'dddd ,MMMM D'
-    );
-    const priceString = deliveryOption.priceCents === 0
-    ?
-    'FREE Shipping'
-    :
-    `$${formatCurrency(deliveryOption.priceCents)} -`;
-
-    const ischecked = deliveryOption.id === cartItem.deliveryOptionId;
- html+= `
-  <div class="delivery-option  js-delivery-option">
-                data-product-id ="${matchingProduct.id}"
-                data-delivery-option-id = "${deliveryOption.id}">
-                    <input type="radio"
-                  ${ischecked ? 'checked' : ''}
-                        class="delivery-option-input"
-                        name="delivery-option-${matchingProduct.id}">
-                    <div>
-                        <div class="delivery-option-date">
-                          ${formatString}
-                        </div>
-                        <div class="delivery-option-price">
-                        ${priceString}- Shipping
-                        </div>
-                    </div>
-                    </div>
-  `
-
-    })
-    return html;
-   }
+                const ischecked = deliveryOption.id === cartItem.deliveryOptionId;
+                html += `
+    <div class="delivery-option js-delivery-option"
+             data-product-id="${matchingProduct.id}"
+             data-delivery-option-id="${deliveryOption.id}">
+        <input type="radio"
+            ${ischecked ? 'checked' : ''}
+            class="delivery-option-input"
+            name="delivery-option-${matchingProduct.id}">
+        <div>
+            <div class="delivery-option-date">${dateString}</div>
+            <div class="delivery-option-price">${priceString}</div>
+        </div>
+    </div>
+                `;
+        });
+        return html;
+     }
     document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
 //    console.log(cartSummaryHTML);
     
@@ -152,9 +138,9 @@ console.log(DeliveryDate.format('dddd ,  MMMM D'));
 
    document.querySelectorAll('.js-delivery-option')
    .forEach((element)=>{
-    element.addEventListener('click',()={
+    element.addEventListener('click',()=>{
          const {productId,deliveryOptionId}=element.dataset;
          updateDeliveryOption(productId,deliveryOptionId);
-    })
+    });
 
-   })
+   });
